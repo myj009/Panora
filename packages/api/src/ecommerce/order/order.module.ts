@@ -15,6 +15,8 @@ import { SquarespaceService } from './services/squarespace';
 import { SquarespaceOrderMapper } from './services/squarespace/mappers';
 import { AmazonOrderMapper } from './services/amazon/mappers';
 import { AmazonService } from './services/amazon';
+import { EbayOrderMapper } from './services/ebay/mappers';
+import { EbayService } from './services/ebay';
 
 @Module({
   controllers: [OrderController],
@@ -30,11 +32,13 @@ import { AmazonService } from './services/amazon';
     WoocommerceOrderMapper,
     SquarespaceOrderMapper,
     AmazonOrderMapper,
+    EbayOrderMapper,
     /* PROVIDERS SERVICES */
     ShopifyService,
     WoocommerceService,
     SquarespaceService,
     AmazonService,
+    EbayService,
   ],
   exports: [SyncService],
 })

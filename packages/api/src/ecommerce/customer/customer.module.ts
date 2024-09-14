@@ -13,6 +13,8 @@ import { WoocommerceCustomerMapper } from './services/woocommerce/mappers';
 import { SyncService } from './sync/sync.service';
 import { SquarespaceCustomerMapper } from './services/squarespace/mappers';
 import { AmazonCustomerMapper } from './services/amazon/mappers';
+import { EbayCustomerMapper } from './services/ebay/mappers';
+import { EbayService } from './services/ebay';
 @Module({
   controllers: [CustomerController],
   providers: [
@@ -27,9 +29,11 @@ import { AmazonCustomerMapper } from './services/amazon/mappers';
     WoocommerceCustomerMapper,
     SquarespaceCustomerMapper,
     AmazonCustomerMapper,
+    EbayCustomerMapper,
     /* PROVIDERS SERVICES */
     ShopifyService,
     WoocommerceService,
+    EbayService,
   ],
   exports: [SyncService],
 })
